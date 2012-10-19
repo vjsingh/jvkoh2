@@ -1,0 +1,622 @@
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/ahg/AlteHaasGroteskRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  font-weight: bold;
+  src: url('/fonts/ahg/AlteHaasGroteskBold.ttf') format('truetype');
+}
+
+html, body
+  background url('/images/WaveLogoBG.png')
+  background-color #EEF3FA
+  background-repeat no-repeat
+  background-position 0px 50px
+
+//hack to fix parallax during transitions, applied to body
+.hideOverflow
+  overflow: hidden
+
+body
+  font-family "Alte Haas Grotesk", Sans-Serif
+  font-size 16px
+  font-weight normal
+  line-height 24px
+  color #0B1F3D
+  text-shadow 0 0 0 #ffffff
+
+.row
+	width 1100px
+
+#rightArrow
+  position: absolute
+  right: 50px
+  top: 50%
+  width: 50px
+
+#leftArrow
+  position: absolute
+  left: 50px
+  top: 50%
+  width: 50px
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td
+  margin 0
+  padding 0
+  border 0
+  font-weight normal
+  font-style normal
+  font-size 100%
+  line-height 1
+  font-family inherit
+
+.container
+  position relative
+
+header
+  padding 0px 0px
+  background white
+  border-bottom 3px solid #BFBFBF
+
+header h1
+  background url('/images/YinYangLogoSmall.png') left center no-repeat
+  color #0B1F3d
+  font-style normal
+  position relative
+  top 10px
+  padding 30px 0px 20px 70px
+  line-height 80px
+
+header h1 em
+  color #BFBFBF
+
+.sidebar
+	background-color rgba(255,255,255,0.8)
+	border-radius 20px
+	padding 15px
+
+.span4
+	background-color rgba(255,255,255,0.8)
+	border-radius 20px
+	padding 15px
+
+.span9
+	background-color rgba(255,255,255,0.8)
+	border-radius 20px
+	padding 15px
+	width 660px
+
+#jplayerBar
+  color white
+  width 100%
+  height 45px
+  margin-bottom 20px
+  background transparent url('/images/bg_player.jpg') repeat-x scroll 0 0
+
+// Center jplayer
+.jp-type-single
+  width 740px
+  margin-left auto
+  margin-right auto
+
+.jp-interface
+    position relative
+    width 40px
+    height 45px
+
+.jp-progress
+    position absolute
+    left 285px
+    bottom 10px
+
+.jp-progress,.jp-seek-bar,.jp-play-bar
+    background #fff
+    width 350px
+    height 10px
+    cursor pointer
+
+.jp-progress
+    background #fff
+
+.jp-play-bar
+    background-color #93EDEE
+
+.jp-current-time, .jp-duration
+    position absolute
+    height 10px
+    width 25px
+    font-size 11px
+
+.jp-current-time
+    left 250px
+    bottom 15px
+
+.jp-duration
+    left 645px
+    bottom 15px
+
+.jp-title
+    position absolute
+    left 385px
+    top 3px
+    height 11px
+    width 350px
+    display block !important
+
+.jp-title ul
+    list-style-type none
+    margin 0
+    padding 0
+    width 350px
+    height: 11px
+
+.jp-title li
+    margin 0
+    padding 0
+    font-size 11px
+    width 350px
+    height 20px
+
+.jp-toggles
+    position absolute
+    left 680px
+    top 0px
+    height 45px
+	width 15px
+
+.jp-toggles li
+    display block
+    width 15px
+    height 15px
+    float left
+
+
+.jp-toggles li a.jp-shuffle-off
+,.jp-toggles li a.jp-shuffle
+,.jp-toggles li a.jp-repeat
+,.jp-toggles li a.jp-repeat-off
+    position absolute
+    top 0
+    left 0
+    display block
+    height 45px
+    width 15px
+    background transparent url(/images/bg_controls_new.png) no-repeat scroll -284px 0
+    text-indent -9999em
+
+.jp-toggles li a.jp-shuffle-off
+    background-position -284px -45px
+
+.jp-toggles li a.jp-repeat
+,.jp-toggles li a.jp-repeat-off
+    position absolute
+    top 0
+    left 20px
+    background-position -263px 0
+
+.jp-toggles li a.jp-repeat-off
+    background-position -263px -45px
+
+#soundCloudLink
+	position relative ! important
+	left 45px ! important
+	top 8px ! important
+
+// get this out of the way for now
+// .jp-progress,.jp-current-time,.jp-title,.jp-duration,.jp-toggles position absolute left -555px
+// .jp-playlist display none
+// .jp-controls-holder width 250pxposition absolute left 0 top 0 z-index 50height 45px background green
+
+.jp-controls, .jp-toggles
+    list-style-type none
+    margin 0
+    padding 0
+    position relative
+
+.jp-controls li,
+,.jp-toggles li
+    margin 0
+    padding 0
+
+.jp-controls li a
+    margin 0
+    padding 0
+    position absolute
+    top 0
+    left 0
+    height 45px
+    display block
+    text-indent -9999em
+    overflow hidden
+    background transparent url(/images/bg_controls_new.png) no-repeat scroll 0 0
+
+.jp-controls li a:hover
+    text-decoration none
+
+.jp-controls li a.jp-previous
+    width 14px
+    left 0px
+    background-position 0 0
+
+.jp-controls a.jp-previous:hover
+    background-position 0 -45px
+
+.jp-controls a.jp-play,
+.jp-controls a.jp-pause
+    left 20px
+    width 30px
+    background-position -20px 0
+
+.jp-controls a.jp-pause
+    background-position -80px 0
+
+.jp-controls a.jp-pause:hover
+    background-position -80px -45px
+
+.jp-controls a.jp-play:hover
+    background-position -20px -45px
+
+.jp-controls a.jp-next
+    width 14px
+    left 56px
+    background-position -56px 0
+
+.jp-controls a.jp-next:hover
+    background-position: -56px -45px
+
+.jp-controls a.jp-stop {
+    left 81px
+    width 15px
+    background-position -118px 0
+}
+.jp-controls a.jp-stop:hover
+    background-position -118px -45px
+
+.jp-controls a.jp-mute,
+.jp-controls a.jp-unmute
+    left 111px
+    width 15px
+    background-position -146px 0
+
+.jp-controls a.jp-mute:hover,
+.jp-controls a.jp-unmute
+    background-position -146px -45px
+
+.jp-controls a.jp-volume-max
+    left 184px
+    width 21px
+    background-position -230px 0
+
+.jp-controls a.jp-volume-max:hover
+    background-position -230px -45px
+
+.jp-volume-bar
+    height 8px
+    width 53px
+    background #fff
+    position absolute
+    left 126px
+    top 19px
+
+.jp-volume-bar-value
+    background-color #93edee
+    position relative
+    width 53px
+    height 8px
+    cursor poiner
+
+.jp-volume-bar-value:hover
+    cursor pointer
+
+
+#content
+  padding-top 15px
+
+h1
+  margin-bottom 24px
+  font-size 30px
+  line-height 48px
+
+h2
+  font-size 24px
+  line-height 48px
+  margin-bottom 24px
+
+h1, h2, h3, h4, h5, h6
+  color #0B1F3D
+
+em
+  font-weight inherit
+  line-weight inherit
+
+.sidebar p
+  margin-right 10px
+
+p
+  font-size 16px
+  font-weight normal
+  line-height 24px
+  margin-bottom 24px
+
+nav
+  position absolute
+  top 20px
+  padding 40px 0px
+  right 0
+
+nav ul
+  margin 0
+  padding 0
+
+ul
+  list-style disc
+
+ul.project-list
+  margin 0 0 60px
+  list-style none
+
+ul.project-list li
+  float left
+  margin-right 20px
+  width 200px
+  height 200px
+  text-align center
+
+.hovergallery img
+  height 150px
+  width 150px
+  margin-left 30px
+  -webkit-transform scale(0.8)
+  -moz-transform scale(0.8)
+  -o-transform scale(0.8)
+  -webkit-transition-duration  0.5s
+  -moz-transition-duration  0.5s
+  -o-transition-duration  0.5s
+  opacity  0.7
+  margin  0 10px 5px 0
+
+.hovergallery img:hover
+  -webkit-transform scale(1.1)
+  -moz-transform scale(1.1)
+  -o-transform scale(1.1)
+  box-shadow 0px 0px 30px gray
+  -webkit-box-shadow 0px 0px 30px gray
+  -moz-box-shadow 0px 0px 30px gray
+  opacity 1
+
+.songTitle
+  padding-top: 10px
+  color #0b1f3d
+  vertical-align bottom
+
+.music-list
+
+.songTitle span
+
+nav ul li
+  list-style none
+  float left
+  margin-left 30px
+
+nav ul li a
+  line-height 1
+  color black
+  text-transform uppercase
+  font-size 14px
+  display block
+  -webkit-transition all 0.3s linear
+  -moz-transition all 0.3s linear
+  -ms-transition all 0.3s linear
+  -o-transition all 0.3s linear
+  transition all 0.3s linear
+  padding-bottom 12px
+  border-bottom 3px solid white
+
+nav ul li a span
+  display block
+  margin 0
+  color #BFBFBF
+  font-size 11px
+
+nav ul li a:hover, nav ul li a.active
+  color #black
+  padding-bottom 12px
+  border-bottom-color #CCC
+  text-decoration none
+
+li
+  line-height 24px
+
+#main
+  border-bottom 0px solid #BFBFBF
+  margin-bottom 0
+
+.page-header
+  margin 0 0 23px
+  background-color rgba(255,255,255,0.8)
+  border-radius 20px
+  padding-left 15px
+  padding-bottom 0px
+
+.page-header h1
+  margin-bottom 11px
+  line-height 48px
+
+footer
+  padding 20px
+  margin-top 20px
+  background-color rgba(255,255,255,0.85)
+  border-radius 20px
+
+footer ul
+  zoom 1
+  width 743px
+  margin-left auto
+  margin-right auto
+  padding 5px
+
+footer ul li:first-child
+  margin-left 0
+  list-style none
+
+footer ul li
+  float left
+  margin-right 10px
+  padding-right 20px
+
+.sidebar figure
+  width auto
+  padding 0
+  margin 0
+  display block
+
+.sidebar figure img
+  border 10px solid white
+  -webkit-box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
+  -moz-box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
+  box-shadow 0 0 4px rgba(0, 0, 0, 0.4)
+
+
+
+
+@media screen and (max-width: 1000px) and (min-width: 400px) {
+  .container {
+    width: 95%;
+  }
+  header {
+    padding: 10px 0;
+  }
+  header h1 {
+    width: 200px;
+    margin: 10px auto 30px;
+  }
+  header nav {
+    position: static;
+    margin: 10px auto;
+    width: 400px;
+  }
+  footer ul li {
+    margin-right: 5px;
+    padding-right: 15px;
+  }
+  .about .row {
+    margin-left: 0;
+  }
+  .about .sidebar {
+    float: right;
+  }
+  .about .sidebar figure {
+    margin-bottom: 20px;
+  }
+  .about .span12 {
+    float: none;
+  }
+  .work .sidebar {
+    width: 100%;
+  }
+  .work .sidebar h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .work .sidebar p {
+    text-align: center;
+  }
+  .work .span12 {
+    width: 100%;
+  }
+  .work ul.project-list li {
+    margin-right: 10px;
+  }
+  .project-detail .span4 {
+    float: right;
+    margin-left: 20px;
+  }
+  .project-detail .span12 {
+    width: 100%;
+    float: none;
+  }
+  .project-detail .row {
+    margin-left: 0;
+  }
+}
+
+
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+  body {
+    font-size: 16px;
+  }
+  header {
+    padding: 10px 0;
+  }
+  header h1 {
+    width: 200px;
+    margin: 10px auto 30px;
+  }
+  header nav {
+    position: static;
+    margin: 10px auto;
+    width: 100%;
+  }
+  header nav ul {
+    padding: 0;
+  }
+  header nav ul li {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+  header nav ul li a {
+    font-size: 20px;
+    border-bottom: 3px solid #bfbfbf;
+    padding: 12px 0;
+  }
+  header nav ul li a span {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  footer ul li {
+    float: none;
+    list-style: disc;
+    padding-left: 5px;
+    padding: 10px 0 5px;
+    margin-left: 25px;
+  }
+  .about figure {
+    display: none;
+  }
+  .span12, .span4 {
+    width: 100%;
+    float: none;
+  }
+  .row {
+    margin-left: 0;
+  }
+  h1 small, h2 small, h3 small {
+    display: block;
+  }
+  ul.project-list li {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  ul.project-list li a img {
+    display: block;
+    margin: 5px auto;
+  }
+  .project-detail ul.slide-list li img {
+    display: block;
+    margin: 10px auto;
+  }
+  .project-detail dd {
+    width: 500px;
+  }
+  .project-detail .next-prev {
+    display: none;
+  }
+}
